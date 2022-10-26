@@ -7,3 +7,7 @@ Projeto didático de construção de uma Pokedex com Javascript
 https://dribbble.com/shots/6540871-Pokedex-App
 
 Caso você queira aprender a fazer um projeto semelhante, [cadastre-se na DIO, clique aqui](https://dio.me/sign-up?ref=WH4RVZFWTA).
+
+[![Linkedin](https://img.shields.io/badge/Made%20by-Tarcnux-deepskyblue)](https://www.linkedin.com/in/tarcnux)
+
+[![Twitter](https://img.shields.io/twitter/follow/tarcnux?style=social)](https://www.twitter.com/tarcnux)
