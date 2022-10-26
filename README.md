@@ -11,3 +11,6 @@ Caso você queira aprender a fazer um projeto semelhante, [cadastre-se na DIO, c
 [![Linkedin](https://img.shields.io/badge/Made%20by-Tarcnux-deepskyblue)](https://www.linkedin.com/in/tarcnux)
 
 [![Twitter](https://img.shields.io/twitter/follow/tarcnux?style=social)](https://www.twitter.com/tarcnux)
+
+Como escrever um bom commit:
+https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/
