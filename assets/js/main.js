@@ -1,7 +1,13 @@
 console.log("main.js importado corretamente");
-console.log("API: https://pokeapi.co/api/v2/pokemon/");
-console.log("Protocolo HTTP");
-console.log("URL Path e Method");
-console.log("16 - Path Params E Query String");
-console.log("17 - Headers");
-console.log("18 - Body E Status Code");
+
+let offset = 0;
+let limit = 10;
+const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
+
+fetch(url)
+    .then(function (response) {
+        console.log(response);
+    });
+const x = 10 + 10;
+
+console.log(x);
