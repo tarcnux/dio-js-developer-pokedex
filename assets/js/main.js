@@ -4,3 +4,4 @@ console.log("Protocolo HTTP");
 console.log("URL Path e Method");
 console.log("16 - Path Params E Query String");
 console.log("17 - Headers");
+console.log("18 - Body E Status Code");
