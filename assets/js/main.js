@@ -1,9 +1,5 @@
 console.log("main.js importado corretamente");
 
-let offset = 0;
-let limit = 10;
-const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
-
 function convertPokemonToHtml(pokemon) {
     return `
     <li class="pokemon">
@@ -23,14 +19,10 @@ function convertPokemonToHtml(pokemon) {
 
 const pokemonList = document.getElementById('pokemonList');
 
-fetch(url)
-    .then(response =>  response.json())
-    .then(jsonBody => jsonBody.results)
-    .then(pokemons => {
-        for(pokemon of pokemons) {
-            pokemonList.innerHTML += convertPokemonToHtml(pokemon);
-        }
+pokeApi
+    .getPokemons()
+    .then((pokemons = []) => {
+        pokemonList.innerHTML += pokemons.map(convertPokemonToHtml).join('')
     })
-    .catch(error  =>  console.log(error))
-    .finally(() => console.log('Requisição concluída.'));
+
 
