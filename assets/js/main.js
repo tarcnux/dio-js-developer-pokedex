@@ -22,7 +22,7 @@ const pokemonList = document.getElementById('pokemonList');
 pokeApi
     .getPokemons()
     .then((pokemons = []) => {
-        pokemonList.innerHTML += pokemons.map(convertPokemonToHtml).join('')
+        pokemonList.innerHTML = pokemons.map(convertPokemonToHtml).join('')
     })
 
 
