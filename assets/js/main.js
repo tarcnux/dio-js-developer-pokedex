@@ -1,6 +1,11 @@
 console.log("main.js importado corretamente");
+const pokemonList = document.getElementById('pokemonList');
+const loadMoreButton = document.getElementById('loadMoreButton')
 
-function convertPokemonToHtml(pokemon) {
+const limit = 5
+let offset = 0
+
+function convertPokemonToLi(pokemon) {
     return `
     <li class="pokemon ${pokemon.type}">
         <span class="number"># ${pokemon.number}</span>
@@ -16,12 +21,20 @@ function convertPokemonToHtml(pokemon) {
     `
 }
 
-const pokemonList = document.getElementById('pokemonList');
+function loadPokemonItens(offset, limit) {
+    pokeApi.getPokemons(offset, limit)
+        .then((pokemons = []) => {
+            pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
+        })
+}
 
-pokeApi
-    .getPokemons()
-    .then((pokemons = []) => {
-        pokemonList.innerHTML = pokemons.map(convertPokemonToHtml).join('')
-    })
+loadPokemonItens(offset, limit);
+
+loadMoreButton.addEventListener('click', () => {
+    offset += limit
+    loadPokemonItens(offset, limit)
+})
+
+
 
 
